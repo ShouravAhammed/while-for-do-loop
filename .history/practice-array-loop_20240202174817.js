@@ -85,23 +85,15 @@
 // calculating discount
 
 const purchaseHistory = [100, 125, 150, 175, 250, 350, 450, 550, 600]
-// const discountPrice = [];
-// for (let i = 0; i < purchaseHistory.length; i++){
-//     const currentNumber = purchaseHistory[i];
-//     if (currentNumber > 200){
-//         calculatingDiscount = currentNumber - currentNumber * 20 / 100;
-//         discountPrice.push(calculatingDiscount);
-//     }else{
-//         discountPrice.push(currentNumber);
-//     }
-// }
-// console.log(discountPrice);
-const discountPriceUsingMap = purchaseHistory.map(function(currentNumber){
+const discountPrice = [];
+for (let i = 0; i < purchaseHistory.length; i++){
+    const currentNumber = purchaseHistory[i];
     if (currentNumber > 200){
         calculatingDiscount = currentNumber - currentNumber * 20 / 100;
-        return calculatingDiscount;
+        discountPrice.push(calculatingDiscount);
     }else{
-        return currentNumber;
+        discountPrice.push(currentNumber);
     }
-});
-console.log(discountPriceUsingMap);
+}
+// console.log(discountPrice);
+const discountPriceUsingMap = purchaseHistory.map(function(currentNumber));
